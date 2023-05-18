@@ -38,7 +38,7 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
     & ~filters.edited
     & ~BANNED_USERS
 )
-@PlayyWrapper
+@PlayWrapper
 async def play_commnd(
     client,
     message: Message,
