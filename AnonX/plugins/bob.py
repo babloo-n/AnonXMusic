@@ -38,7 +38,7 @@ async def assistant(c: Client, m: Message):
 
 
 @app.on_message(
-    command(["بابلو])
+    command(["بابلو"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
