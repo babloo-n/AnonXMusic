@@ -9,7 +9,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from strings import get_command
+from strings import get_command, command
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
 from AnonX.core.call import Anon
@@ -32,6 +32,12 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 @app.on_message(
     filters.command(PLAY_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["تشغيل","شغل"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
