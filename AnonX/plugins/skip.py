@@ -20,7 +20,7 @@ SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
 @app.on_message(
-    filters.command(["ايقاف","/end","انهاء"])
+    filters.command(["تخطي"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
