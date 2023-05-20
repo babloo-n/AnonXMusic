@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
+from strings.filters import command
 from AnonX import YouTube, app
 from AnonX.core.call import Anon
 from AnonX.misc import db
@@ -20,7 +21,13 @@ SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
 @app.on_message(
-    filters.command(["تخطي"])
+    filters.command(SKIP_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["تخطي"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
