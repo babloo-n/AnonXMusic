@@ -26,7 +26,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     return buttons
 
 
-def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None): 
     buttons = [
         [
             InlineKeyboardButton(
@@ -49,7 +49,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
         [
             InlineKeyboardButton(
-                text="✨ sᴏᴜʀᴄᴇ ✨", url=f"https://t.me/BA_BLOO"
+                text="✨ sᴏᴜʀᴄᴇ ✨", url=f"https://t.me/Hour_W33d"
             )
         ],
      ]
